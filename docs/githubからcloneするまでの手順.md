@@ -35,5 +35,7 @@ git config --global credential.helper wincred
 ## 参考
 
 [Qiita-GitHubの複数アカウントを使い分けるならSSHよりhttpsの方がいいんじゃね？という話][*1]  
+[Caching your GitHub password in Git][*2]
 
 [*1]:http://qiita.com/zaki-yama/items/bfb0c2bef516af58c3fa
+[*2]]:https://help.github.com/articles/caching-your-github-password-in-git/
