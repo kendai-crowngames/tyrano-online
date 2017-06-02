@@ -58,6 +58,7 @@ password={pass}
 [Caching your GitHub password in Git][*2]
 [ssh-agent][*3]
 
+
 [*1]:http://qiita.com/zaki-yama/items/bfb0c2bef516af58c3fa
 [*2]]:https://help.github.com/articles/caching-your-github-password-in-git/
 [*3]:https://help.github.com/articles/working-with-ssh-key-passphrases/
