@@ -28,9 +28,29 @@ Host github.com.crowngames
 
 ## 認証情報の保存
 
+### windowsの場合
+
+キャッシュを有効にするコマンド
+
 ```
 git config --global credential.helper wincred
 ```
+
+認証情報の保存
+
+```
+git credential-wincred store
+```
+
+入力モードになるので、以下のように保存
+`{user}`と`{pass}`は自分の環境に合わせて保存すること
+
+```
+protocol=ssh
+host=github.com.crowngames
+username={user}
+password={pass}
+``
 
 ## 参考
 
