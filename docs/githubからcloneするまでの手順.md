@@ -26,6 +26,11 @@ Host github.com.crowngames
   IdentitiesOnly yes
 ```
 
+## 認証情報の保存
+
+```
+git config --global credential.helper wincred
+```
 
 ## 参考
 
