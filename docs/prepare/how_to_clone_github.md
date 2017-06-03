@@ -26,31 +26,56 @@ Host github.com.crowngames
   IdentitiesOnly yes
 ```
 
-## 認証情報の保存
+### ssh認証の保存
+
+crowngamesの秘密鍵を保存。
+
+```bash
+ssh-add ~/.ssh/crowngames
+```
+
+#### ssh-agentの起動
+
+bashを起動したときに立ち上げるように設定
+
+```bash
+cp docs/prepare/data/.bashrc
+```
+
+
+## github認証情報の保存
 
 ### windowsの場合
 
 キャッシュを有効にするコマンド
 
-```
+```bash
 git config --global credential.helper wincred
 ```
 
 認証情報の保存
 
-```
+```bash
 git credential-wincred store
 ```
 
 入力モードになるので、以下のように保存
 `{user}`と`{pass}`は自分の環境に合わせて保存すること
 
-```
+```bash
 protocol=ssh
 host=github.com.crowngames
 username={user}
 password={pass}
-``
+```
+
+## clone
+
+上記の設定を終えた上で、以下のコマンドを入力。
+
+```bash
+git clone git@github.com:kendai-crowngames/tyrano-online.git
+```
 
 ## 参考
 
