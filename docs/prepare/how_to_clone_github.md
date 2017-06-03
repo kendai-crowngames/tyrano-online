@@ -1,5 +1,16 @@
 # githubへのつなぎ方
 
+## clone
+
+以下のコマンドを入力するとgithubからプロジェクトをcloneできる。
+
+```bash
+git clone git@github.com:kendai-crowngames/tyrano-online.git
+```
+
+ただし、cloneした後にpushするために色々と設定が必要。  
+以下に、行っておくべき設定を記載する。
+
 ## sshの設定
 
 ### 暗号鍵の設置
@@ -53,37 +64,24 @@ cp docs/prepare/data/.bashrc
 git config --global credential.helper wincred
 ```
 
-認証情報の保存
+## gitの設定
+
+メールとパスワードを設定していなければ、以下のコマンドで設定する。
 
 ```bash
-git credential-wincred store
+git config --global user.name "{username}"
+git config --global user.email {mailadress}
 ```
 
-入力モードになるので、以下のように保存
-`{user}`と`{pass}`は自分の環境に合わせて保存すること
-
-```bash
-protocol=ssh
-host=github.com.crowngames
-username={user}
-password={pass}
-```
-
-## clone
-
-上記の設定を終えた上で、以下のコマンドを入力。
-
-```bash
-git clone git@github.com:kendai-crowngames/tyrano-online.git
-```
 
 ## 参考
 
 [Qiita-GitHubの複数アカウントを使い分けるならSSHよりhttpsの方がいいんじゃね？という話][*1]  
 [Caching your GitHub password in Git][*2]
 [ssh-agent][*3]
-
+[使い始める - 最初のGitの構成][*4]
 
 [*1]:http://qiita.com/zaki-yama/items/bfb0c2bef516af58c3fa
 [*2]]:https://help.github.com/articles/caching-your-github-password-in-git/
 [*3]:https://help.github.com/articles/working-with-ssh-key-passphrases/
+[*4]:https://git-scm.com/book/ja/v1/%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%82%8B-%E6%9C%80%E5%88%9D%E3%81%AEGit%E3%81%AE%E6%A7%8B%E6%88%90
